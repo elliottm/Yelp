@@ -1,0 +1,30 @@
+<nav class="nav_header">
+<%= link_to 'User Login', method: :get %>
+<%= link_to "Add restaurant", new_restaurant_path %>
+</nav>
+
+<body>
+
+  <h1>Restaurant#index</h1>
+
+<div class="container">
+    <h2> List of Restaurants: </h2>
+
+  <div class="restaurant_block">
+
+    <% @restaurant.each do |restaurant| %>
+      <h3>Restaurant: <%= restaurant.name %></h3>
+      <%= link_to 'Details', restaurant_path(restaurant) %>
+      <%= link_to "Review count #{restaurant.reviews.count}", restaurant_path(restaurant) %>
+      <h4>Description:</h4>
+      <p><%= restaurant.description %></p>
+    <div class="review_block">
+	  </div>
+
+    <% end %>
+
+  </div>
+
+</div>
+
+</body>
