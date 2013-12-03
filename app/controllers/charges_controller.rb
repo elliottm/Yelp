@@ -9,7 +9,7 @@ class ChargesController < ApplicationController
 	  @amount = 500
 
 	  customer = Stripe::Customer.create(
-	    :email => 'example@stripe.com',
+	    :email => 'mark@gmail.com',
 	    :card  => params[:stripeToken]
 	  )
 
@@ -19,6 +19,9 @@ class ChargesController < ApplicationController
 	    :description => 'Rails Stripe customer',
 	    :currency    => 'usd'
 	  )
+
+	mail = RestaurantMailer.notify_payment(params[:stripeEmail])
+	mail.deliver
 
 	redirect_to restaurants_path
 
