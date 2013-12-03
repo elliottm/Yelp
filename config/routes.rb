@@ -3,6 +3,8 @@ Yelp::Application.routes.draw do
 
   root "restaurants#index"
 
+  resources :charges
+  
   resources :restaurants do
     resources :reviews
   end

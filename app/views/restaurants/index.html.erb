@@ -18,6 +18,8 @@
       <%= link_to "Review count #{restaurant.reviews.count}", restaurant_path(restaurant) %>
       <h4>Description:</h4>
       <p><%= restaurant.description %></p>
+      <%= render "charges/form" %>
+
     <div class="review_block">
 	  </div>
 
