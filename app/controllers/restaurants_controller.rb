@@ -9,7 +9,7 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-  	@restaurant = Restaurant.create(params[:restaurant].permit(:name, :description))        
+  	@restaurant = Restaurant.create(params[:restaurant].permit(:name, :description, :email))        
         
     if @restaurant.save
       flash[:notice] = "Successfully added"

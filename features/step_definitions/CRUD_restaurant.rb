@@ -1,6 +1,7 @@
 When(/^I fill in the add new restaurant form$/) do
   fill_in 'Name', :with => 'McDonalds'
   fill_in 'Description', :with => 'Organic upper end restaurant'
+  fill_in 'Email', :with => 'ahoy@gmail.com'
 end
 
 Given(/^a restaurant has already been added$/) do

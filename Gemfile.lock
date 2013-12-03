@@ -44,6 +44,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    capybara-email (2.2.0)
+      capybara (~> 2.1.0)
+      mail
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -174,6 +177,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  capybara-email
   coffee-rails (~> 4.0.0)
   cucumber-rails
   database_cleaner

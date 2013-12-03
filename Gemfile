@@ -1,15 +1,16 @@
 source 'https://rubygems.org'
 
-
 group :test, :development do
   gem 'rspec-rails'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
+  gem 'capybara-email'
 end
 
 gem 'devise'
+
 
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
